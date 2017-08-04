@@ -1,0 +1,191 @@
+/*内容区域中心*/
+.inner_c1 {
+    width: 1200px;
+    margin:0 auto;
+}
+.content {
+    width: 100%;
+    height: auto;
+}
+.content .center {
+    margin-top: 20px;
+    width: 1200px;
+}
+
+.content .center .left {
+    float: left;
+    height: 500px;
+    width: 28%;
+    background-color:black;
+}
+.content .center .right {
+    float: right;
+    height: auto;
+    width: 70%;
+}
+
+.content .center .right .box  {
+    display: none;
+}
+
+.content .center .right .slider .box  {
+    display: block;
+}
+
+/*内容主题区域*/
+.content .center .right  .box1 {
+    min-height: 500px;
+    width: 100%;
+    background-color: palegoldenrod;
+}
+ .content .center .right .box1 .wbox {
+            width: 700px;
+            height: 220px;
+            margin-left: 70px;
+        }
+.content .center .right .box1 .wbox .wleft {
+            width: 640px;
+            height: 220px;
+            background-color: white;
+            top:30px;
+            left:0;
+            padding-left: 25px;
+            position: relative;
+        }
+ .content .center .right .box1 .wbox textarea {
+            background-color: white;
+             resize: none; /*防止用户拖拉*/
+        }
+.content .center .right .box1 .wbox h2 {
+            background-color: white;
+        }
+ .content .center .right .box1 .wbox  h2 a{
+            background-color: white;
+            font-size: 18px;
+            line-height: 36px;
+            color: black;
+            text-decoration: none;
+        }
+.content .center .right .box1 .wbox #about {
+            background-color: white;
+        }
+ .content .center .right .box1 .wbox #about a {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding-left: 10px;
+            margin-left: 10px;
+            float: left;
+            width: 50px;
+            height:30px;
+            display: block;
+        }
+ .content .center .right .box1 .wbox button {
+            width: 100px;
+            height: 40px;
+            background-color:lightblue ;
+            position: absolute;
+            bottom:6px;
+            right: 57px;
+            font-size: 20px;
+            color: white;
+        }
+ .content .center .right .box1 .wbox .dom {
+            width: 100px;
+            margin-top: 7px;
+        }
+ .content .center .right .box1 .wbox .dom p {
+            background-color:lightblue ;
+        }
+ .content .center .right .box1  ul {
+            list-style: none;
+        }
+
+ .content .center .right .box1  #box1 {
+            width: 660px;
+            height: auto;  /*设置自动。高度跟着内容增减*/
+            margin: 50px 0 0 75px;
+            padding: 30px 0;
+        }
+        
+ .content .center .right .box1  #box1  ul li {
+            margin-left: 50px;
+            border-bottom: 1px dashed #ccc;
+            line-height: 30px;
+            margin-right: 50px;
+            color: black;
+            font-size: 20px;
+        }
+ .content .center .right .box1  #box1  a {
+            float: right;
+            cursor: pointer;
+        }
+
+
+
+
+/*内容图片区域*/
+.content .center .right .box  .wrapper{
+    width: 100%;
+    /*overflow: scroll;*/
+}
+.content .center .right .box  .wrapper .items {
+    position: relative;
+}
+.content .center .right .box  .wrapper .items .item {
+    position: absolute;
+    width: 262px;
+}
+.content .center .right .box  .wrapper .items .item img {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+.content .center .right .box  .wrapper .items .item:nth-child(1) {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.content .center .right .box  .wrapper .items .item:nth-child(2) {
+    position: absolute;
+    top:0;
+    left:289px;
+}
+.content .center .right .box  .wrapper .items .item:nth-child(3) {
+    position: absolute;
+    top:0;
+    left:578px;
+}
+.content .center .right .box  .wrapper .items .item:nth-child(4) {
+    position: absolute;
+    top:350px;
+    left:0;
+}
+.content .center .right .box  .wrapper .items .item:nth-child(5) {
+    position: absolute;
+    top:350px;
+    left:289px;
+}
+.content .center .right .box  .wrapper .items .item:nth-child(6) {
+    position: absolute;
+    top:350px;
+    left:578px;
+}
+.content .center  .right .box  .wrapper .tips {
+    width: 280px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 300px;
+    position: absolute;
+    z-index: 999;
+    color: white;
+}
+.content .center .right .box  .wrapper .loading {
+    /* background-color: transparent; */
+    background-color:hotpink;
+}

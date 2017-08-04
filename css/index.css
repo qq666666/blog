@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 1000px;
+}
+/*清除浮动*/
+.cl{
+    clear: both;
+}
+
+/*头部开始*/
+.header {
+    height: 82px;
+}
+/*居中*/
+.inner_c {
+    width: 1000px;
+    margin: 0 auto;
+}
+.header .logo a{
+    display: block;
+    width: 280px;
+    height: 82px;
+    background:  url(../image/logo.jpg) no-repeat;
+    float: left;
+    cursor: pointer;
+    text-indent: -999px;
+}
+
+#demo {
+    color: #ffb22a;
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -650px;
+}
+.header .nav ul{
+    float:right;
+}
+.header .nav ul li {
+    list-style: none;
+    width: 95px;
+    height: 82px;
+    float: left;
+    line-height: 82px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+.header .nav ul li:first-child {
+    width: 82px;
+}
+.header .nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    width: 82px;
+    height: 82px;
+    display: block;
+    color: #333333;
+}
+.header .nav ul li a:hover {
+    color:#818496 ;
+}
+.header .nav ul li i {
+    position: absolute;
+    top:0;
+    left:20px;
+    display: none;
+    color: #756F71;
+    font-size: 14px;
+}
+.header .nav ul li:nth-child(1) i {
+    position: absolute;
+    top:0;
+    left:20px;
+}
+
+.header .nav ul li:hover i{
+    transform: translate(0,20px);
+    -webkit-animation:bottom 1s ease;
+    -moz-animation:bottom 1s ease;
+    -o-animation:bottom 1s ease;
+    -ms-animation:bottom 1s ease;
+    animation: bottom 1s ease;
+    display: block;
+}
+@-webkit-keyframes bottom {
+    0% {
+        transform: translate(0,0);
+        opacity:0;
+    }
+    50% {
+        transform: translate(0,20px);
+        opacity:0.5;
+    }
+    100% {
+        transform: translate(0,20px);
+        opacity:1;
+    }
+}
+
+@-moz-keyframes bottom {
+    0% {
+        transform: translate(0,0);
+        opacity:0;
+    }
+    50% {
+        transform: translate(0,20px);
+        opacity:0.5;
+    }
+    100% {
+        transform: translate(0,20px);
+        opacity:1;
+    }
+}
+@-o-keyframes bottom {
+    0% {
+        transform: translate(0,0);
+        opacity:0;
+    }
+    50% {
+        transform: translate(0,20px);
+        opacity:0.5;
+    }
+    100% {
+        transform: translate(0,20px);
+        opacity:1;
+    }
+}
+
+@-ms-keyframes bottom {
+    0% {
+        transform: translate(0,0);
+        opacity:0;
+    }
+    50% {
+        transform: translate(0,20px);
+        opacity:0.5;
+    }
+    100% {
+        transform: translate(0,20px);
+        opacity:1;
+    }
+}
+@keyframes bottom {
+    0% {
+           transform: translate(0,0);
+          opacity:0;
+    }
+    50% {
+        transform: translate(0,20px);
+        opacity:0.5;
+    }
+    100% {
+        transform: translate(0,20px);
+        opacity:1;
+    }
+}
+
+/*banner区域*/
+.banner {
+    width: 100%;
+    height:265px;
+    background: url(../image/banner_top.jpg) top center;
+    overflow: hidden;
+}
+.banner .texts {
+    width: 350px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 77px 0 20px 210px;
+    color: #756F71;
+}
+
+
+.texts p {
+    /* Safari 和 Chrome: */
+    -webkit-transform: translate(80px);
+    /* Firefox: */
+    -moz-transform: translate(80px);
+    /* Opera: */
+    -o-transform: translate(80px);
+    -ms-transform: translate(80px);
+    transform: translate(80px);
+}
+.texts p:nth-child(1) {
+    -webkit-animation: animations 3s ease-out 1s backwards;
+    -moz-animation: animations 3s ease-out 1s backwards;
+    -o-animation: animations 3s ease-out 1s backwards;
+    -ms-animation: animations 3s ease-out 1s backwards;
+    /*规定动画名*/
+    animation-name: animations;
+    /*规定动画完成一个周期所花费的秒或毫秒*/
+    animation-duration: 3s;
+    /*规定动画速度曲线*/
+    animation-timing-function:ease-in-out;
+    /*规定动画何时开始*/
+    animation-delay: 1s;
+    /*规定对象动画时间之外的状态  backwards在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值*/
+    animation-fill-mode:backwards;
+}
+.texts p:nth-child(2) {
+    -webkit-animation: animations 3s ease-out 4s backwards;
+    -moz-animation: animations 3s ease-out 4s backwards;
+    -o-animation: animations 3s ease-out 4s backwards;
+    -ms-animation: animations 3s ease-out 4s backwards;
+    /*规定动画名*/
+    animation-name: animations;
+    /*规定动画完成一个周期所花费的秒或毫秒*/
+    animation-duration: 3s;
+    /*规定动画速度曲线*/
+    animation-timing-function:ease-in-out;
+    /*规定动画何时开始*/
+    animation-delay: 4s;
+    /*规定对象动画时间之外的状态  backwards在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值*/
+    animation-fill-mode:backwards;
+}
+.texts p:nth-child(3) {
+    -webkit-animation: animations2 5s ease-in-out 7s backwards;
+    -moz-animation: animations2 5s ease-in-out 7s backwards;
+    -o-animation: animations2 5s ease-in-out 7s backwards;
+    -ms-animation: animations2 5s ease-in-out 7s backwards;
+    /*规定动画名*/
+    animation-name: animations2;
+    /*规定动画完成一个周期所花费的秒或毫秒*/
+    animation-duration: 5s;
+    /*规定动画速度曲线*/
+    animation-timing-function:ease-in-out;
+    /*规定动画何时开始*/
+    animation-delay: 7s;
+    /*规定对象动画时间之外的状态  backwards在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值*/
+    animation-fill-mode:backwards;
+}
+/* Safari 和 Chrome: */
+@-webkit-keyframes animations {
+    0% {
+    -webkit-transform:translate(0);
+    opacity:0;
+}
+    50% {
+        -webkit-transform:translate(40px);
+        opacity:.5;
+    }
+    100% {
+        -webkit-transform:translate(80px);
+        opacity:1;
+    }
+}
+/* Firefox: */
+@-moz-keyframes animations {
+    0% {
+    -moz-transform:translate(0);
+    opacity:0;
+}
+    50% {
+        -moz-transform:translate(40px);
+        opacity:.5;
+    }
+    100% {
+        -moz-transform:translate(80px);
+        opacity:1;
+    }
+}
+/* Opera: */
+@-o-keyframes animations {
+    0% {
+    -o-transform:translate(0);
+    opacity:0;
+}
+    50% {
+        -o-transform:translate(40px);
+        opacity:.5;
+    }
+    100% {
+        -o-transform:translate(80px);
+        opacity:1;
+    }
+}
+@-ms-keyframes animations {
+    0% {
+    -ms-transform:translate(0);
+    opacity:0;
+}
+    50% {
+        -ms-transform:translate(40px);
+        opacity:.5;
+    }
+    100% {
+        -ms-transform:translate(80px);
+        opacity:1;
+    }
+}
+@keyframes animations {
+    0% {
+    transform:translate(0);
+    opacity:0;
+}
+    50% {
+        transform:translate(40px);
+        opacity:.5;
+    }
+    100% {
+        transform:translate(80px);
+        opacity:1;
+    }
+}
+@-webkit-keyframes animations2 {
+    0% {
+    opacity:0;
+}
+    40% {
+        opacity:.8;
+    }
+    45% {
+        opacity:.3;
+    }
+    50% {
+        opacity:.8;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-moz-keyframes animations2 {
+    0% {
+    opacity:0;
+}
+    40% {
+        opacity:.8;
+    }
+    45% {
+        opacity:.3;
+    }
+    50% {
+        opacity:.8;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-o-keyframes animations2 {
+    0% {
+    opacity:0;
+}
+    40% {
+        opacity:.8;
+    }
+    45% {
+        opacity:.3;
+    }
+    50% {
+        opacity:.8;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-ms-keyframes animations2 {
+    0% {
+    opacity:0;
+}
+    40% {
+        opacity:.8;
+    }
+    45% {
+        opacity:.3;
+    }
+    50% {
+        opacity:.8;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes animations2 {
+    0% {
+    opacity:0;
+}
+    40% {
+        opacity:.8;
+    }
+    45% {
+        opacity:.3;
+    }
+    50% {
+        opacity:.8;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+.banner .face {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background:url(../image/face.png) no-repeat -137px -105px;
+    position: absolute;
+    top:131px;
+    left:1008px;
+    border: 4px solid white;
+}
+
+/*导航区域*/
+
+.content-nav {
+    width: 100%;
+    height:58px;
+    background-color:#eee;
+}
+
+.content-nav ul {
+    list-style: none;
+    margin-left: 310px;
+}
+.content-nav ul li {
+    width: 80px;
+    height: 58px;
+    float: left;
+    text-align: center;
+    line-height: 58px;
+    margin-left: 100px;
+}
+.content-nav ul li a {
+    text-decoration: none;
+    color:#333333;
+}
+.content-nav ul li a:hover {
+    color:#818496;
+}
+
+.current {
+    border-bottom: 5px solid hotpink;
+}
+.fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+}

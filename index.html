@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shiqingqing个人博客 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <link  rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/content.css">
+</head>
+<!--引入jquery包-->
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/content.js"></script>
+
+
+<!--引入模版引擎-->
+<script src="js/template-native.js"></script>
+
+<!--引入自定义插件-->
+<script src="js/jQuery.waterfall.js"></script>
+
+<!--定义模版引擎-->
+<script type="text/template" id='template'>
+	<% for(var i = 0; i < items.length;i++){%>
+	<div class='item'>
+		<img src="<%=items[i].path%>" alt=''>
+		<p><%=items[i].text%></p>
+	</div>
+	<%}%>
+</script>
+
+<!--使用模版引擎-->
+<!-- 为按钮添加点击事件 -->
+<script>
+	$(function() {
+		$('.tips').click(function() {
+			// alert(11);
+
+			$.ajax({
+				url:'waterfall.php',
+				type:'get',
+				dataType:'json',
+				success:function(data) {
+					// console.log(data);
+					// 转换成对象
+					var obj = {
+						items:data
+					};
+					// 引用模版引擎
+					var result = template('template',obj);
+					// console.log(result);
+					// 渲染在页面上
+					$('.items').append(result);
+					// 引用自定义的插件
+					$('.items').waterfall();
+				}
+			});
+		});
+	})
+</script>
+
+<!--固定导航栏-->
+<script src="js/nav.js"></script>
+<body>
+<!--头部区域-->
+	<div class="header">
+		<div class="inner_c">
+			<div class="logo"><a href="#">qingqing_shi博客</a></div>
+			<div id="demo"></div>
+			<div class="nav">
+				<ul>
+					<li><a href=""><span>首页</span></a><i>Portal</i></li>
+					<li><a href=""><span>视频</span></a><i>Video</i></li>
+					<li><a href=""><span>游戏</span></a><i>Game</i></li>
+					<li><a href=""><span>登录</span></a><i>Login</i></li>
+					<li><a href=""><span>注册</span></a><i>Register</i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<script src="js/time.js"></script>
+	<div class="cl"></div>
+	<div class="banner">
+		<ul class="texts">
+			<p>程序员不可以没有刚强的毅力</p>
+			<p>因为程序员的责任重大</p>
+			<p>工作的道路遥远</p>
+		</ul>
+
+		<div class="face"></div>
+	</div>
+	<div class="cl"></div>
+
+	<!--导航区域-->
+<div class="content-nav" id="content-nav">
+	<ul>
+		<li><a href='#'>话题主页</a></li>
+		<li><a href='#'>图片墙</a></li>
+		<li><a href='#'>留言板</a></li>
+		<li><a href='#'>关于我</a></li>
+	</ul>
+</div>
+
+
+
+
+	<!--内容区域-->
+	<div class="content">
+	<div class="inner_c1">
+		<div class="center">
+
+			<!--左侧区域-->
+			<div class="left"></div>
+
+
+
+			<!--右侧区域-->
+			<div class="right">
+
+				<!--话题主页区域-->
+				<div class="demo slider">
+					<div class="box box1">
+						<div class="wbox">
+    <div class="wleft">
+        <h2><a href="">冬天过去了，夏天还远么......</a></h2>
+        <textarea id="txt" cols="70" rows="7"></textarea>
+        <div id="about">
+            <a href="">话题</a>
+            <a href="" id="friend">朋友</a>
+            <a href="">表情</a>
+            <a href="">头条</a>
+        </div>
+        <div id="btn">
+            <button>广播</button>
+        </div>
+    </div>
+</div>
+<div id="box1">
+	<ul>
+		<li>你好啊<a>删除</a></li>
+		<li>好久不见了<a>删除</a></li>
+		<li>最近好么<a>删除</a></li>
+		<li>我很好<a>删除</a></li>
+		<li>晚上要玩么<a>删除</a></li>
+
+	</ul>
+</div>
+					</div>
+				</div>
+
+
+
+				<!--照片区域-->
+				<div class="demo">
+					<div class="box">
+
+						<div class="wrapper">
+							<!-- items 作为 瀑布流的容器  瀑布流中的 元素的 宽度 是固定的 -->
+							<div class="items">
+								<div class="item">
+								<img src="images/111.jpg" alt="">
+								<p>
+									这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+								</p>
+								</div>
+								<div class="item">
+									<img src="images/112.jpg" alt="">
+									<p>
+										这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+									</p>
+								</div>
+								<div class="item">
+									<img src="images/113.jpg" alt="">
+									<p>
+										这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+									</p>
+								</div>
+								<div class="item">
+									<img src="images/114.jpg" alt="">
+									<p>
+										这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+									</p>
+								</div>
+								<div class="item">
+									<img src="images/115.jpg" alt="">
+									<p>
+										这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+									</p>
+								</div>
+								<div class="item">
+									<img src="images/116.jpg" alt="">
+									<p>
+										这俩货还没有决出胜 负，旁边拉屎的哥们都吐了三回了！！！"
+									</p>
+								</div>
+							</div>
+							<p class="tips loading" id="tips" >加载更多</p>
+						</div>
+
+					</div>
+				</div>
+
+
+
+             <!--学习资料区域-->
+				<div class="demo">
+					<div class="box">3</div>
+				</div>
+
+				<!--关于我区域-->
+				<div class="demo">
+					<div class="box">4</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<script src='js/weibo.js'></script>
+
+
